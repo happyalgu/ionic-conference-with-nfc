@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      NFC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  Ionic NFC example
+  
+    <!--<ion-buttons>
+      <button class="btn" (click)="startNFC()">
+        Start
+      </button>
+    </ion-buttons>-->
+    <div class="card">
+      <div class="item item-text-wrap">
+
+    <ion-item>
+    <button class="btn" (click)="startNFC()">
+      Start
+    </button></ion-item>
+    </div>
+    </div>
+  
+  <div *ngIf="tag">
+    <p>The tag contains:</p>
+    <pre>{{tag | json}}</pre>
+    <p>Decoded tag ID: {{decodedTagId}}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>
